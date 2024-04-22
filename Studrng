@@ -4,151 +4,6 @@ else
     game:GetService("Players").LocalPlayer:Kick("Support Only Stud'rng")
 end
 
-function AntiKick()
-    for _, descendant in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
-        if descendant:IsA("LocalScript") then
-            local blacklistNames = {"General", "Shiftlock", "FallDamage", "4444", "CamBob", "JumpCD", "Looking", "Run"}
-            if table.find(blacklistNames, descendant.Name) then
-                descendant:Destroy()
-            end
-        end
-    end
-    for _, descendant in pairs(game:GetService("Players").LocalPlayer.PlayerScripts:GetDescendants()) do
-        if descendant:IsA("LocalScript") then
-            local blacklistNames = {"RobloxMotor6DBugFix", "Clans", "Codes", "CustomForceField", "MenuBloodSp", "PlayerList"}
-            if table.find(blacklistNames, descendant.Name) then
-                descendant:Destroy()
-            end
-        end
-    end
-end
-AntiKick()
-
-spawn(function()
-local startPos
-local function update(input)
-	local delta = input.Position - dragStart
-	local dragTime = 0.04
-	local SmoothDrag = {}
-	SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
-	dragSmoothFunction:Play()
-end
-Drag.InputBegan:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-		dragging = true
-		dragStart = input.Position
-		startPos = Drag.Position
-		input.Changed:Connect(function()
-			if input.UserInputState == Enum.UserInputState.End then
-				dragging = false
-			end
-		end)
-	end
-end)
-Drag.InputChanged:Connect(function(input)
-	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-		dragInput = input
-	end
-end)
-UserInputService.InputChanged:Connect(function(input)
-	if input == dragInput and dragging and Drag.Size then
-		update(input)
-	end
-end)
-
-
-
-local bbbatusxxxddddd = game:service'VirtualUser'
-
-game:service'Players'.LocalPlayer.Idled:connect(function()
-	bbbatusxxxddddd:CaptureController()
-	bbbatusxxxddddd:ClickButton2(Vector2.new())
-end)
-
-
-
-
-local FPSsLabel = fpslabel
-local RunService = game:GetService("RunService")
-local RenderStepped = RunService.RenderStepped
-local sec = nil
-local FPS = {}
-
-local function fre()
-	local fr = tick()
-	for index = #FPS,1,-1 do
-		FPS[index + 1] = (FPS[index] >= fr - 1) and FPS[index] or nil
-	end
-	FPS[1] = fr
-	local fps = (tick() - sec >= 1 and #FPS) or (#FPS / (tick() - sec))
-	fps = math.floor(fps)
-	fpslabel.Text = fps
-end
-
-
-sec = tick()
-RenderStepped:Connect(fre)
-
-
-
-
-spawn(function()
-	repeat
-		wait(1)
-		local ping = tonumber(game:GetService("Stats"):FindFirstChild("PerformanceStats").Ping:GetValue())
-		ping = math.floor(ping)
-		pinglabel.Text = ping
-
-
-
-	until pinglabel == nil
-end)
-
-local saniye = 0
-
-
-
-local dakika = 0
-
-
-
-local saat = 0
-
-
-
-
-getgenv().zamanbaslaticisi = true
-
-while true do
-
-
-		if getgenv().zamanbaslaticisi then
-
-			saniye = saniye + 1
-
-			wait(1)
-
-		end --if zaman baslaticisi end
-
-
-		if saniye >= 60 then
-			saniye = 0
-			dakika = dakika + 1
-
-		end --if saniye 60 end
-
-
-		if dakika >= 60 then
-			dakika = 0
-			saat = saat + 1
-
-		end --if dakika 60 end
-
-		timerlabel.Text = saat..":"..dakika..":"..saniye
-	end
-end)
-
 function auto()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94.50811004638672, 71.3809585571289, -45.73484802246094)
   wait(1)
@@ -235,11 +90,13 @@ function pressKey(key, times, delay)
 	end
 end
 
+spawn(function()
 _G.aio = true
 while _G.aio do wait()
   wait(0)
   pressKey("e", 10, 0.30)
 end
+end)
 
 _G.tele = true
 while do wait()
