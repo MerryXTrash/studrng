@@ -1,3 +1,29 @@
+if game.PlaceId == 16095412846 then
+    studrng = true
+else
+    game:GetService("Players").LocalPlayer:Kick("Support Only Stud'rng")
+end
+
+function AntiKick()
+    for _, descendant in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+        if descendant:IsA("LocalScript") then
+            local blacklistNames = {"General", "Shiftlock", "FallDamage", "4444", "CamBob", "JumpCD", "Looking", "Run"}
+            if table.find(blacklistNames, descendant.Name) then
+                descendant:Destroy()
+            end
+        end
+    end
+    for _, descendant in pairs(game:GetService("Players").LocalPlayer.PlayerScripts:GetDescendants()) do
+        if descendant:IsA("LocalScript") then
+            local blacklistNames = {"RobloxMotor6DBugFix", "Clans", "Codes", "CustomForceField", "MenuBloodSp", "PlayerList"}
+            if table.find(blacklistNames, descendant.Name) then
+                descendant:Destroy()
+            end
+        end
+    end
+end
+AntiKick()
+
 spawn(function()
 local startPos
 local function update(input)
@@ -217,5 +243,6 @@ end
 
 _G.tele = true
 while do wait()
+wait(21)
 auto()
 end
