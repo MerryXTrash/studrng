@@ -1,0 +1,91 @@
+function auto()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94.50811004638672, 71.3809585571289, -45.73484802246094)
+  wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-45.31818389892578, 50.974647521972656, 26.422420501708984)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-109.6771240234375, 61.85498809814453, 25.219934463500977)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-182.31910705566406, 37.42904281616211, -188.8603057861328)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4.5640740394592285, 50.7746467590332, -51.43516540527344)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8.264930725097656, 65.59697723388672, -150.23324584960938)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(87.45160675048828, 53.299129486083984, -199.88101196289062)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.575523376464844, 46.1595344543457, -99.21186065673828)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.56756591796875, 46.20887756347656, -84.0544662475586)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43.930381774902344, 95.72891998291016, -105.70854949951172)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10.079387664794922, 97.3151626586914, -134.73538208007812)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(75.89376068115234, 46.86482238769531, 99.87103271484375)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28.44610595703125, 49.8646125793457, 81.33013153076172)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1.6418894529342651, 62.3151741027832, -98.39240264892578)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26.645143508911133, 97.3151626586914, -167.13218688964844)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-128.41221618652344, 64.85497283935547, 66.29409790039062)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.8694610595703, 61.85498809814453, 24.43721580505371)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-198.43568420410156, 64.85497283935547, 36.34586715698242)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-85.0108413696289, 53.34946060180664, 133.21873474121094)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-112.29383087158203, 61.85498809814453, 25.969186782836914)
+    wait(1)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-171.64198303222656, 61.893775939941406, 82.33027648925781)
+end
+
+function click()
+local utf8 = {
+	["A"] = 0x41,
+	["B"] = 0x42,
+	["C"] = 0x43,
+	["D"] = 0x44,
+	["E"] = 0x45,
+	["F"] = 0x46,
+	["G"] = 0x47,
+	["H"] = 0x48,
+	["I"] = 0x49,
+	["J"] = 0x4A,
+	["K"] = 0x4B,
+	["L"] = 0x4C,
+	["M"] = 0x4D,
+	["N"] = 0x4E,
+	["O"] = 0x4F,
+	["P"] = 0x50,
+	["Q"] = 0x51,
+	["R"] = 0x52,
+	["S"] = 0x53,
+	["T"] = 0x54,
+	["U"] = 0x55,
+	["V"] = 0x56,
+	["W"] = 0x57,
+	["X"] = 0x58,
+	["Y"] = 0x59,
+	["Z"] = 0x5A,
+}
+
+function pressKey(key, times, delay)
+	key = string.upper(key)
+	for i = 1, tonumber(times) do
+		keypress(utf8[key])
+
+	}
+	local clickfunc = clicks[which]
+	for i = 1, times do
+		clickfunc()
+		wait(delay)
+	end
+end
+_G.aio = true
+while _G.aio do wait()
+  wait(0)
+  pressKey("e", 10, 0.30)
+end
