@@ -193,7 +193,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94.50811
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-171.64198303222656, 61.893775939941406, 82.33027648925781)
 end
 
-function click()
 local utf8 = {
 	["A"] = 0x41,
 	["B"] = 0x42,
@@ -235,6 +234,7 @@ function pressKey(key, times, delay)
 		wait(delay)
 	end
 end
+
 _G.aio = true
 while _G.aio do wait()
   wait(0)
