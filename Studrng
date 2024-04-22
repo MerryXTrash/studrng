@@ -89,3 +89,8 @@ while _G.aio do wait()
   wait(0)
   pressKey("e", 10, 0.30)
 end
+
+_G.tele = true
+while do wait()
+auto()
+end
